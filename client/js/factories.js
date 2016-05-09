@@ -1,6 +1,5 @@
-//The action to call the local API should be here
+var factories = angular.module('myApp.factories', []);
 
-var app = angular.module('', ['']);
-app.factory('', ['', []]);
-
-
+factories.factory('Contacts', ['$resource', function($resource) {
+    return $resource('http://localhost:3000/api/posts/:id');
+}])
